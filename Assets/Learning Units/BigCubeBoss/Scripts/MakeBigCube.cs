@@ -12,8 +12,12 @@ public class MakeBigCube : MonoBehaviour
         {
             for (int j = 0; j < 10; j++)
             {
-                GameObject newCube = Instantiate(singleCube); // This will create a new cube
-                newCube.transform.position = new Vector3(i * 3f, j * 3f, 0);
+                for(int k = 0; k < 10; k++)
+                {
+                    GameObject newCube = Instantiate(singleCube); // This will create a new cube
+                    newCube.transform.position = new Vector3(j * 3f, i * 3f, k* 3f);
+
+                }
             }
         }
     }
